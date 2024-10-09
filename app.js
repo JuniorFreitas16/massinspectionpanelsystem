@@ -59,3 +59,17 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+// P.O code generate
+document.addEventListener("DOMContentLoaded", function() {
+  const poInput = document.getElementById("po");
+
+  function generatePO() {
+      const date = new Date();
+      const formattedDate = date.toISOString().replace(/[-T:.Z]/g, '').substring(0, 14);
+      const sequence = Math.floor(Math.random() * 10000).toString().padStart(4, '0');
+      return formattedDate + sequence;
+  }
+
+  poInput.value = generatePO();
+});

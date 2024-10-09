@@ -52,6 +52,7 @@ document.getElementById('inspectionForm')?.addEventListener('submit', function (
   
   const formData = new FormData(event.target);
   const inspectionData = {
+    po: formData.get('po'),
     planDate: formData.get('planDate'),
     partNumber: formData.get('partNumber'),
     model: formData.get('model'),

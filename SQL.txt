@@ -1,0 +1,46 @@
+-- Criação do banco de dados
+CREATE DATABASE panel_inspection;
+
+-- Utilizar o banco de dados criado
+USE panel_inspection;
+
+-- Tabela de Modelos
+CREATE TABLE models (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    plant VARCHAR(255) NOT NULL,
+    part_type VARCHAR(255) NOT NULL,
+    part_number VARCHAR(255) NOT NULL,
+    model VARCHAR(255) NOT NULL,
+    vendor VARCHAR(255) NOT NULL,
+    box_qty INT NOT NULL
+);
+
+-- Tabela de Planos de Inspeção
+CREATE TABLE inspection_plans (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    plan_date DATETIME NOT NULL,
+    line VARCHAR(255) NOT NULL,
+    part_number VARCHAR(255) NOT NULL,
+    model VARCHAR(255) NOT NULL,
+    vendor VARCHAR(255) NOT NULL,
+    plan_qty INT NOT NULL,
+    part_type VARCHAR(255) NOT NULL,
+    box_qty INT NOT NULL,
+    remark TEXT,
+    po_code VARCHAR(20) NOT NULL
+);
+
+-- Tabela de Inspeções
+CREATE TABLE inspections (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    date DATE NOT NULL,
+    time TIME NOT NULL,
+    part_number VARCHAR(255) NOT NULL,
+    model VARCHAR(255) NOT NULL,
+    serial_number VARCHAR(255),
+    status ENUM('OK', 'NG') NOT NULL,
+    defect VARCHAR(255),
+    part VARCHAR(255),
+    area VARCHAR(255),
+    photo BLOB
+);

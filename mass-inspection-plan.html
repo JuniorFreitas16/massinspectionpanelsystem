@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Mass Inspection Plan</title>
+  <link rel="stylesheet" href="plan.css">
+</head>
+<body>
+  <h2>Input Mass Inspection Plan</h2>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="model-input.html">Model Input</a></li>
+          <li><a href="mass-inspection-plan-list.html">Mass Inspection Plan List</a></li>
+          <li><a href="mass-inspection.html">Mass Inspection</a></li>
+        </ul>
+      </nav>  
+      <form id="inspectionForm">
+        <label for="po">P.O:</label>
+        <input type="text" id="po" name="po" readonly value="">
+        <label>Plan Date:</label>
+        <input type="date" name="planDate" required>
+        <label>Part Number:</label>
+        <input type="text" name="partNumber" required>
+        <label>Model:</label>
+        <select name="model"></select>
+        <label>Line:</label>
+        <select name="line">
+          <option value="L1">L1</option>
+          <option value="L2">L2</option>
+        </select>
+        <label>Vendor:</label>
+        <select name="vendor"></select>
+        <label>Plan Qty.:</label>
+        <input type="number" name="planQty" required>
+        <label>Part Type:</label>
+        <select name="partType"></select>
+        <label>Box Qty.:</label>
+        <input type="number" name="boxQty" required>
+        <label>Remark:</label>
+        <textarea name="remark"></textarea>
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model Input</title>
+  <link rel="stylesheet" href="input.css">
+</head>
+<body>
+  <h2>Model Input</h2>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mass-inspection-plan.html">Input Mass Inspection Plan</a></li>
+        <li><a href="mass-inspection-plan-list.html">Mass Inspection Plan List</a></li>
+        <li><a href="mass-inspection.html">Mass Inspection</a></li>
+      </ul>
+    </nav>
+    <div class="form">
+      <form id="modelForm">
+        <label>Plant:</label>
+        <select name="plant">
+          <option value="P81A">P81A</option>
+          <option value="P81B">P81B</option>
+          <option value="P81D">P81D</option>
+          <option value="P82A">P82A</option>
+        </select>
+        <label>Part Type:</label>
+        <select name="partType">
+          <option value="OPEN CELL">OPEN CELL</option>
+          <option value="PANEL">PANEL</option>
+        </select>
+        <label>Part Number:</label>
+        <input type="text" name="partNumber" required>
+        <label>Model:</label>
+        <input type="text" name="model" required>
+        <label>Vendor:</label>
+        <select name="vendor">
+          <option value="SAMEX">SAMEX</option>
+          <option value="SEHC">SEHC</option>
+        </select>
+        <label>Box Qty.:</label>
+        <input type="number" name="boxQty" required>
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

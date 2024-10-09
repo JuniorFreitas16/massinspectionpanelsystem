@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mass Inspection</title>
+  <link rel="stylesheet" href="inspection.css">
+</head>
+<body>
+  <h2>Mass Inspection</h2>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="model-input.html">Model Input</a></li>
+        <li><a href="mass-inspection-plan.html">Mass Inspection Plan</a></li>
+        <li><a href="mass-inspection.html">Mass Inspection</a></li>
+      </ul>
+    </nav> 
+    <div id="inspectionDashboard">
+      <p><strong>Model:</strong> <span id="model"></span></p>
+      <p><strong>Part Number:</strong> <span id="partNumber"></span></p>
+    </div>
+    <div id="dashboard">
+      <div class="dashboarditems">
+        <div class="dashbox">
+          <p>Model Plan: <span id="modelPlan"></span></p>
+        </div>
+        <div class="dashbox">
+          <p>Inspection Progress: <span id="inspectionProgress"></span>%</p>
+        </div>
+          <div class="dashbox">
+        <p>NG Rate: <span id="ngRate"></span>%</p>
+          </div>
+        <div class="dashbox">
+          <p>OK: <span id="okCount"></span></p>
+        </div>
+        <div class="dashbox">
+          <p>NG: <span id="ngCount"></span></p>
+        </div>
+      </div>   
+    </div>
+    <form id="inspectionForm">
+      <label>Date:</label>
+      <input type="date" name="date" value="2024-10-03" readonly>
+      <label>Time:</label>
+      <input type="time" name="time" readonly>
+      <label>Part Number:</label>
+      <input type="text" name="partNumber" readonly>
+      <label>Model:</label>
+      <input type="text" name="model" readonly>
+      <label>Serial Number:</label>
+      <input type="text" name="serialNumber">
+      <label>Status:</label>
+      <select name="status">
+        <option value="OK">OK</option>
+        <option value="NG">NG</option>
+      </select>
+      <div id="ng-fields" style="display:none;">
+        <label for="defect">Defect:</label>
+        <input type="text" id="defect" name="defect">
+        
+        <label for="part">Part:</label>
+        <input type="text" id="part" name="part">
+      
+        <label for="area">Area:</label>
+        <input type="text" id="area" name="area">
+      
+        <label for="photo">Photo:</label>
+        <input type="file" id="photo" name="photo">
+      </div>
+      
+      <button type="submit">Save</button>
+    </form>
+    <table id="inspection-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Part Number</th>
+          <th>Model</th>
+          <th>Serial Number</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Aqui os dados serão preenchidos dinamicamente -->
+      </tbody>
+    </table>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

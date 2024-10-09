@@ -1,6 +1,6 @@
 const express = require('express');
-const sequelize = require('./config/database');
-const inspectionRoutes = require('./routes/inspection');
+const sequelize = require('./db');
+const inspectionRoutes = require('./inspection');
 const bodyParser = require('body-parser');
 
 const app = express();

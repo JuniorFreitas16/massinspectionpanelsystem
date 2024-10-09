@@ -2,7 +2,7 @@ const { Sequelize } = require('sequelize');
 
 // Configuração da conexão com o MySQL
 const sequelize = new Sequelize('panel_inspection', 'seda', 'Seda@2024', {
-  host: 's52.67.247.40',  // Ex: '18.231.225.95'
+  host: '52.67.247.40',  // Ex: '18.231.225.95'
   dialect: 'mysql'
 });
 

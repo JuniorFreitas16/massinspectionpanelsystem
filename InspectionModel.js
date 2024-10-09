@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+const sequelize = require('../db');
 
 const InspectionModel = sequelize.define('InspectionModel', {
   plant: { type: DataTypes.STRING, allowNull: false },

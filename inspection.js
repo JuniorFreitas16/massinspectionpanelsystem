@@ -1,5 +1,5 @@
 const express = require('express');
-const InspectionModel = require('../models/InspectionModel');
+const InspectionModel = require('..InspectionModel');
 const router = express.Router();
 
 // Rota para criar novo registro

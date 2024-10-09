@@ -13,6 +13,7 @@ const Model = sequelize.define('Model', {
 
 // Modelo de Planos de Inspeção
 const InspectionPlan = sequelize.define('InspectionPlan', {
+  po_code: DataTypes.STRING(20), 
   plan_date: DataTypes.DATE,
   line: DataTypes.STRING,
   part_number: DataTypes.STRING,
@@ -21,8 +22,8 @@ const InspectionPlan = sequelize.define('InspectionPlan', {
   plan_qty: DataTypes.INTEGER,
   part_type: DataTypes.STRING,
   box_qty: DataTypes.INTEGER,
-  remark: DataTypes.TEXT,
-  po_code: DataTypes.STRING(20)
+  remark: DataTypes.TEXT
+  
 }, { tableName: 'inspection_plans' });
 
 // Modelo de Inspeções
